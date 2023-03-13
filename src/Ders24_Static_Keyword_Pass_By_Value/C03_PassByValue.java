@@ -8,8 +8,8 @@ public class C03_PassByValue {
 
         int[] arr = {3,4,5};
 
-        elementleriArttir(arr,4);
-        System.out.println("method call dan sonra arr : " + Arrays.toString(arr));
+        elementleriArttir(arr,4);// [7, 8, 9]
+        System.out.println("method call dan sonra arr : " + Arrays.toString(arr)); // [7, 8, 9]
     }
     public static void elementleriArttir(int [] arr, int artisMiktari){
         for (int i = 0; i < arr.length; i++) {
