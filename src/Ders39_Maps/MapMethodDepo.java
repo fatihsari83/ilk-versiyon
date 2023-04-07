@@ -128,4 +128,30 @@ public class MapMethodDepo {
 
 
     }
+
+    public static Map<Integer, String> soyisimleriBuyukYap(Map<Integer, String> okulMap) {
+
+        // Enrty ler ile cozelim
+        Set <Map.Entry <Integer,String>> okulEntrySeti= okulMap.entrySet();
+
+        // her bir Entry i elden gecirrip sadec soyisimleri buyuk harf yapalım
+
+        for (Map.Entry <Integer,String> eachEntry: okulEntrySeti
+             ) {
+
+            // her bir entry deki value alalım
+            String value= eachEntry.getValue();
+
+            // value yi arraye cevir
+            String[]valueArr= value.split("-");
+
+            //array icinde soyismi buyuk harf yapalım
+            valueArr[1]=valueArr[1].toUpperCase();
+
+            eachEntry.setValue(valueArr[0]+ "-" + valueArr[1]+ "-"+ valueArr[2]+ "-"+
+                                valueArr[3]+ "-"+ valueArr[4]+ "-");
+
+        }
+        return okulMap;
+    }
 }
